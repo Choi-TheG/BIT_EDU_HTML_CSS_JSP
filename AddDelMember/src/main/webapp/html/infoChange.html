@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정보변경하기</title>
+</head>
+<body>
+<form action="../jsp/infoProcess.jsp" method="post">
+ID : <input type="text" name="id" value="<%= request.getParameter(id) %>">
+<br>
+PW : <input type="password" name="pw">
+<br> 
+Name : <input type="text" name="name">
+<br> 
+Email : <input type="text" name="email">
+<br>
+<input type="submit" value="변경">
+</form>
+</body>
+</html>

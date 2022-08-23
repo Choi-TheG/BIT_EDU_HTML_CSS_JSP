@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>신규생성</title>
+<script type="text/javascript">
+function sendMember(){
+	var fmMember = document.fmMember;
+	var id = fmMember.id.value;
+	var pw = fmMember.pw.value;
+	var name = fmMember.name.value;
+	var email = fmMember.email.value;
+	
+	if(id.length == 0 || id == ""){
+		alert("input ID");
+	} else if(id.length > 20){
+		alert("ID can't over 20 letters");
+	} else if(pw.length == 0 || pwd == ""){
+		alert("input password");
+	} else if(pw.length > 20){
+		alert("password can't over 20 letters");
+	} else if(name.length == 0 || pwd == ""){
+		alert("input name");
+	} else if(name.length > 5){
+		alert("name can't over 5 letters");
+	} else if(email.length == 0 || pwd == ""){
+		alert("input email");
+	} else if(id.length > 50){
+		alert("email can't over 50 letters");
+	} else{
+		fmMember.method = "post";
+		fmMember.action = "../jsp/process2.jsp";
+		fmMember.submit();
+	}
+}
+
+</script>
+</head>
+<body>
+<form action="../jsp/addProcess.jsp" method="post">
+ID : <input type="text" name="id">
+<br>
+PW : <input type="password" name="pw">
+<br> 
+Name : <input type="text" name="name">
+<br> 
+Email : <input type="text" name="email">
+<br>
+<input type="submit" value="추가">
+</form>
+</body>
+</html>
